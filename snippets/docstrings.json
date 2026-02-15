@@ -1,0 +1,25 @@
+{
+    "shebang": {
+        "prefix": "env",
+        "body": "#!/usr/bin/env python",
+        "description": "Shebang line for the Python"
+    },
+    "shebang ver3": {
+        "prefix": "env3",
+        "body": "#!/usr/bin/env python3",
+        "description": "Shebang line for the Python3"
+    },
+    "docstring": {
+        "prefix": "doc",
+        "body": "\"\"\"$0\"\"\"",
+        "description": "docstring"
+    },
+    "main": {
+        "prefix": "ifmain",
+        "body": [
+            "if __name__ == \"__main__\":",
+            "\t${0:main()}"
+        ],
+        "description": "execute main block"
+    }
+}

@@ -1,0 +1,32 @@
+{
+    "from collection.abc import ...": {
+        "prefix": "fimabc",
+        "body": "from collection.abc import $0",
+        "description": "import abc types from collections.abc"
+    },
+    "from dataclasses import dataclass": {
+        "prefix": "fimdata",
+        "body": "from dataclasses import dataclass",
+        "description": "import dataclass"
+    },
+    "from datetime import datetime": {
+        "prefix": "fimdate",
+        "body": "from datetime import datetime",
+        "description": "import datetime"
+    },
+    "from fractions import Fraction": {
+        "prefix": "fimfrac",
+        "body": "from fractions import Fraction",
+        "description": "import Fraction"
+    },
+    "from pathlib import Path": {
+        "prefix": "fimpath",
+        "body": "from pathlib import Path",
+        "description": "import Path object"
+    },
+    "from pprint import pprimt": {
+        "prefix": "fimpp",
+        "body": "from pprint import pprint",
+        "description": "import pprint"
+    }
+}

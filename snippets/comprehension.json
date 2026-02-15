@@ -1,0 +1,52 @@
+{
+    "comprehension": {
+        "prefix": "comprehension",
+        "body": "${1:value} for ${2:${1:value}} in ${0:iterable}",
+        "description": "comprehension"
+    },
+    "comprehention if filter": {
+        "prefix": "cif",
+        "body": "${1:value} for ${2:${1:value}} in ${0:iterable} if ${4:condition}",
+        "descriptino": "comprehention with if filter"
+    },
+    "list comprehension": {
+        "prefix": "lc",
+        "body": "[${1:value} for ${2:${1:value}} in ${0:iterable}]",
+        "description": "list comprehention"
+    },
+    "list comprehention if filter": {
+        "prefix": "lcif",
+        "body": "[${1:value} for ${2:${1:value}} in ${0:iterable} if ${4:condition}]",
+        "description": "list comprehention with if filter"
+    },
+    "dict comprehention": {
+        "prefix": "dc",
+        "body": "{${1:key: value} for ${2:${1:key: value}} in ${0:iterable}}",
+        "description": "dict comprehention"
+    },
+    "dict comprehention if filter": {
+        "prefix": "dcif",
+        "body": "{${1:key: value} for ${2:${1:key: value}} in ${0:iterable} if ${4:condition}}",
+        "description": "dict comprehention"
+    },
+    "set comprehention": {
+        "prefix": "dc",
+        "body": "{${1:value} for ${2:${1:value}} in ${0:iterable}}",
+        "description": "set comprehention"
+    },
+    "set comprehention if filter": {
+        "prefix": "dcif",
+        "body": "{${1:value} for ${2:${1:value}} in ${0:iterable} if ${4:condition}}",
+        "description": "set comprehention"
+    },
+    "generator comprehention": {
+        "prefix": "gc",
+        "body": "(${1:value} for ${2:${1:value}} in ${0:iterable})",
+        "description": "generator comprehention"
+    },
+    "generator comprehention if filter": {
+        "prefix": "gcif",
+        "body": "(${1:value} for ${2:${1:value}} in ${0:iterable} if ${4:condition})",
+        "description": "generator comprehention"
+    }
+}

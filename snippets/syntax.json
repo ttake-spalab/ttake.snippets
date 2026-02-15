@@ -1,0 +1,446 @@
+{
+    "if": {
+        "prefix": "if",
+        "body": [
+            "if ${1:condition}:",
+            "\t${0:pass}"
+        ],
+        "description": "`if` statement"
+    },
+    "else if": {
+        "prefix": "elif",
+        "body": [
+            "elif ${1:condition}:",
+            "\t${0:pass}"
+        ],
+        "description": "else if statement"
+    },
+    "else": {
+        "prefix": "else",
+        "body": [
+            "else ${1:condition}:",
+            "\t${0:pass}"
+        ],
+        "description": "else statement"
+    },
+    "if/else": {
+        "prefix": "ife",
+        "body": [
+            "if ${1:condition}:",
+            "\t${2:pass}",
+            "else:",
+            "\t${0:pass}"
+        ],
+        "description": "if else statement"
+    },
+    "if/elif/else": {
+        "prefix": "ifee",
+        "body": [
+            "if ${1:condition}:",
+            "\t${2:pass}",
+            "elif ${3:condition}:",
+            "\t${4:pass}",
+            "else:",
+            "\t${0:pass}"
+        ],
+        "description": "if elif else statement"
+    },
+    "while": {
+        "prefix": "while",
+        "body": [
+            "while ${1:condition}:",
+            "\t${0:pass}"
+        ],
+        "description": "while statement"
+    },
+    "while/else": {
+        "prefix": "whilee",
+        "body": [
+            "while ${1:condition}:",
+            "\t${2:pass}",
+            "else:",
+            "\t${0:pass}"
+        ],
+        "description": "while else statement"
+    },
+    "for": {
+        "prefix": "for",
+        "body": [
+            "for ${1:value} in ${2:iterable}:",
+            "\t${0:pass}"
+        ],
+        "description": "for statement"
+    },
+    "for/else": {
+        "prefix": "fore",
+        "body": [
+            "for ${1:value} in ${2:iterable}:",
+            "\t${3:pass}",
+            "else:",
+            "\t${0:pass}"
+        ],
+        "description": "for else statement"
+    },
+    "try/except": {
+        "prefix": "try",
+        "body": [
+            "try:",
+            "\t${1:pass}",
+            "except ${2:Exception} as ${3:err}:",
+            "\t${0:pass}"
+        ],
+        "description": "try except block"
+    },
+    "try/except/finally": {
+        "prefix": "tryf",
+        "body": [
+            "try:",
+            "\t${1:pass}",
+            "except ${2:Exception} as ${3:err}:",
+            "\t${4:pass}",
+            "finally:",
+            "\t${0:pass}"
+        ],
+        "description": "try except finally block"
+    },
+    "try/finally": {
+        "prefix": "tryf",
+        "body": [
+            "try:",
+            "\t${1:pass}",
+            "finally:",
+            "\t${0:pass}"
+        ],
+        "description": "try finally block"
+    },
+    "try/except/else": {
+        "prefix": "trye",
+        "body": [
+            "try:",
+            "\t${1:pass}",
+            "except ${2:Exception} as ${3:err}:",
+            "\t${4:pass}",
+            "else:",
+            "\t${0:pass}"
+        ],
+        "description": "try except else block"
+    },
+    "try/except/else/finally": {
+        "prefix": "tryef",
+        "body": [
+            "try:",
+            "\t${1:pass}",
+            "except ${2:Exception} as ${3:err}:",
+            "\t${4:pass}",
+            "else:",
+            "\t${5:pass}",
+            "finally:",
+            "\t${0:pass}"
+        ],
+        "description": "try except else finally block"
+    },
+    "except": {
+        "prefix": "except",
+        "body": [
+            "except ${1:Exception} as ${2:err}:",
+            "\t${0:pass}"
+        ],
+        "description": "exception statement"
+    },
+    "except-star": {
+        "prefix": "excepts",
+        "body": [
+            "except* ${1:Exception} as ${2:err}:",
+            "\t${0:pass}"
+        ],
+        "description": "exception* statement"
+    },
+    "with": {
+        "prefix": "with",
+        "body": [
+            "with ${1:context}:",
+            "\t${0:pass}"
+        ],
+        "description": "with statement"
+    },
+    "with-as": {
+        "prefix": "withas",
+        "body": [
+            "with ${1:context} as ${2:alias}:",
+            "\t${0:pass}"
+        ],
+        "description": "with as statement"
+    },
+    "with multiline": {
+        "prefix": "withm",
+        "body": [
+            "with (",
+            "\t${1:context1} as ${2:alias1}",
+            "\t${3:context2} as ${4:alias2}",
+            "):",
+            "\t${0:pass}"
+        ],
+        "description": "multi-line with satement"
+    },
+    "match": {
+        "prefix": "match",
+        "body": [
+            "match ${1:expression}:",
+            "\tcase ${2:patterns}:",
+            "\t\t${0:pass}"
+        ],
+        "description": "match case block"
+    },
+    "case": {
+        "prefix": "case",
+        "body": [
+            "case ${1:patterns}:",
+            "\t${0:pass}"
+        ],
+        "description": "case statement"
+    },
+    "case-as": {
+        "prefix": "caseas",
+        "body": [
+            "case ${1:patterns} as ${2:alias}:",
+            "\t${0:pass}"
+        ],
+        "description": "case as statement"
+    },
+    "case-if": {
+        "prefix": "caseif",
+        "body": [
+            "case ${1:patterns} if ${2:condition}:",
+            "\t${0:pass}"
+        ],
+        "description": "case if statement"
+    },
+    "case wildcard": {
+        "prefix": ["casew", "case*"],
+        "body": [
+            "case _:",
+            "\t${0:pass}"
+        ],
+        "description": "case * statement"
+    },
+    "function define": {
+        "prefix": "def",
+        "body": [
+            "def ${1:fname}(${2:arg: types})$3:",
+            "\t${0:pass}"
+        ],
+        "description": "function definitions"
+    },
+    "function w/ typehint": {
+        "prefix": ["defty", "defhint"],
+        "body": [
+            "def ${1:fname}(${2:args: types}) -> ${3:types}:",
+            "\t${0:pass}"
+        ],
+        "description": "function definitions with type hint"
+    },
+    "class": {
+        "prefix": "class",
+        "body": [
+            "class ${1:ClassName}:",
+            "\t${0:pass}"
+        ],
+        "description": "class definitions"
+    },
+    "class": {
+        "prefix": "classi",
+        "body": [
+            "class ${1:ClassName}:",
+            "\t\"\"\"${3:docstring for ${1:ClassName}}\"\"\"",
+            "\tdef __init__(self, ${args: types}) -> None:",
+            "\t\tsuper(${1:ClassName}, self).__init__()",
+            "\t\t$0"
+        ],
+        "description": "class definitions template"
+    },
+    "method": {
+        "prefix": "defs:",
+        "body": [
+            "def ${1:fname}(self, ${2:args: types}) -> ${3:types}:",
+            "\t${0:pass}"
+        ],
+        "description": "method definition"
+    },
+    "class method": {
+        "prefix": "defc",
+        "body": [
+            "@classmethod",
+            "def ${1:fname}(cls, ${2:args: types}) -> ${3:types}:",
+            "\t${0:pass}"
+        ],
+        "description": "class method defintion"
+    },
+    "static method": {
+        "prefix": "defst",
+        "body": [
+            "@staticmethod",
+            "def ${1:fname}(${2:args: types}) -> ${3:types}:",
+            "\t${0:pass}"
+        ],
+        "description": "static method definition"
+    },
+    "dunder method": {
+        "pefix": "defd",
+        "body": [
+            "def __${1:fname}__(self, ${2:args: types}) -> ${3:types}",
+            "\t${0:pass}"
+        ],
+        "description": "special method definition"
+    },
+    "property getter": {
+        "prefix": "@property",
+        "body": [
+            "@property",
+            "def ${1:var}(self) -> ${2:types}:",
+            "\treturn ${0:self._${1:var}}"
+        ],
+        "description": "property getter definition"
+    },
+    "property setter": {
+        "prefix": "@property.setter",
+        "body": [
+            "@${1:var}.setter",
+            "def ${1:var}(self, ${2:value}):",
+            "\t${0:self._${1:var}} = ${2:value}"
+        ],
+        "description": "property setter definition"
+    },
+    "async function": {
+        "prefix": "adef",
+        "body": [
+            "async def ${1:fname}(${2:args: types}) -> ${3:types}:",
+            "\t${0:pass}"
+        ],
+        "description": "coroutine function definition"
+    },
+    "async for": {
+        "prefix": "afor",
+        "body": [
+            "async for ${1:value} in ${2:iterable}:",
+            "\t${0:pass}"
+        ],
+        "description": "async `for` statement"
+    },
+    "async for/else": {
+        "prefix": "afore",
+        "body": [
+            "async for ${1:value} in ${2:iterable}:",
+            "\t${3:pass}",
+            "else:",
+            "\t${0:pass}"
+        ],
+        "description": "async `for else` statement"
+    },
+    "async with": {
+        "prefix": "awith",
+        "body": [
+            "async with ${1:context}:",
+            "\t${0:pass}"
+        ],
+        "description": "async with statement"
+    },
+    "wsync ith-as": {
+        "prefix": "awithas",
+        "body": [
+            "async with ${1:context} as ${2:alias}:",
+            "\t${0:pass}"
+        ],
+        "description": "async with as statement"
+    },
+    "async with multiline": {
+        "prefix": "awithm",
+        "body": [
+            "async with (",
+            "\t${1:context1} as ${2:alias1}",
+            "\t${3:context2} as ${4:alias2}",
+            "):",
+            "\t${0:pass}"
+        ],
+        "description": "multi-line async with satement"
+    },
+    "assert": {
+        "prefix": "ass",
+        "body": "assert ${0:expression}",
+        "description": "`assert` statement"
+    },
+    "del": {
+        "prefix": "del",
+        "body": "del ${0:value}",
+        "description": "`del` statement"
+    },
+    "return": {
+        "prefix": "re",
+        "body": "return $0",
+        "description": "`return` statement"
+    },
+    "yield": {
+        "prefix": "yi",
+        "body": "yield $0",
+        "description": "`yield` statement"
+    },
+    "yield from": {
+        "prefix": ["yif", "yieldf"],
+        "body": "yield from ${0:iterable}",
+        "description": "`yield from` statement"
+    },
+    "raise": {
+        "prefix": "ra",
+        "body": "raise ${0:Exception}",
+        "description": "`raise` statement"
+    },
+    "raise from": {
+        "prefix": ["raf", "raisef"],
+        "body": "raise ${1:Exception} from ${0:err}",
+        "description": "`raise` statement"
+    },
+    "import": {
+        "prefix": "im",
+        "body": "import ${0:package/module}",
+        "description": "`import` statement"
+    },
+    "import as": {
+        "prefix": "imas",
+        "body": "import ${1:package/module} as ${0:alias}",
+        "description": "`import as` statement"
+    },
+    "from import": {
+        "prefix": "fim",
+        "body": "from ${1:package/module} import ${0:module}",
+        "description": "`from import` statement"
+    },
+    "from import as": {
+        "prefix": "fimas",
+        "body": "from ${1:package/module} import ${2:module} as ${0:alias}",
+        "description": "`from import as` statement"
+    },
+    "from __future__ import": {
+        "pefix": "fimf",
+        "body": "from __future__ import ${1:annotations, division}",
+        "description": "future statement"
+    },
+    "global": {
+        "prefix": "gl",
+        "body": "global $0",
+        "description": "global statement"
+    },
+    "nonlocal": {
+        "prefix": "nonl",
+        "body": "nonlocal $0",
+        "description": "nonlocal statement"
+    },
+    "type alias": {
+        "prefix": ["tya", "typealias"],
+        "body": "type ${1:Alias} = ${0:expression}",
+        "description": "type alise statement"
+    },
+    "lambda": {
+        "prefix": "lambda",
+        "body": "lambda ${1:args}: ${0:expression}",
+        "description": "`lambda` statement"
+    }
+}

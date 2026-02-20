@@ -1,24 +1,26 @@
 {
     "name": "ttake-snippets",
-    "engine": {
+    "engines": {
         "vscode": "^1.11.0"
     },
     "contributes": {
-        {
-            "language": "python",
-            "path": "./snippets/comprehention.json"
-        },
-        {
-            "language": "python",
-            "path": "./snippets/buitins.json"
-        },
-        {
-            "language": "python",
-            "path": "./snippets/docstrings.json"
-        },
-        {
-            "language": "python",
-            "path": "./snippets/syntax.json"
+        "snippets": {
+            {
+                "language": "python",
+                "path": "./snippets/comprehention.json"
+            },
+            {
+                "language": "python",
+                "path": "./snippets/buitins.json"
+            },
+            {
+                "language": "python",
+                "path": "./snippets/docstrings.json"
+            },
+            {
+                "language": "python",
+                "path": "./snippets/syntax.json"
+            }
         }
     }
 }

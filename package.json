@@ -7,11 +7,11 @@
         "snippets": {
             {
                 "language": "python",
-                "path": "./snippets/comprehention.json"
+                "path": "./snippets/comprehension.json"
             },
             {
                 "language": "python",
-                "path": "./snippets/buitins.json"
+                "path": "./snippets/builtins.json"
             },
             {
                 "language": "python",

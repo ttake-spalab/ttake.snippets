@@ -1,17 +1,17 @@
 {
-    "name": "ttake-snippets",
+    "name": "ttake.snippets",
     "engines": {
         "vscode": "^1.11.0"
     },
     "contributes": {
-        "snippets": {
-            {
-                "language": "python",
-                "path": "./snippets/comprehension.json"
-            },
+        "snippets": [
             {
                 "language": "python",
                 "path": "./snippets/builtins.json"
+            },
+            {
+                "language": "python",
+                "path": "./snippets/comprehension.json"
             },
             {
                 "language": "python",
@@ -21,6 +21,6 @@
                 "language": "python",
                 "path": "./snippets/syntax.json"
             }
-        }
+        ]
     }
 }

@@ -247,7 +247,7 @@
         ],
         "description": "class definitions"
     },
-    "class": {
+    "class template": {
         "prefix": "classi",
         "body": [
             "class ${1:ClassName}:",
@@ -285,9 +285,9 @@
         "description": "static method definition"
     },
     "dunder method": {
-        "pefix": "defd",
+        "prefix": "defd",
         "body": [
-            "def __${1:fname}__(self, ${2:args: types}) -> ${3:types}",
+            "def __${1:fname}__(self, ${2:args: types}) -> ${3:types}:",
             "\t${0:pass}"
         ],
         "description": "special method definition"
@@ -344,7 +344,7 @@
         ],
         "description": "async with statement"
     },
-    "wsync ith-as": {
+    "async with-as": {
         "prefix": "awithas",
         "body": [
             "async with ${1:context} as ${2:alias}:",
@@ -419,7 +419,7 @@
         "description": "`from import as` statement"
     },
     "from __future__ import": {
-        "pefix": "fimf",
+        "prefix": "fimf",
         "body": "from __future__ import ${1:annotations, division}",
         "description": "future statement"
     },

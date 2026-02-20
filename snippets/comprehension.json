@@ -7,7 +7,7 @@
     "comprehention if filter": {
         "prefix": "cif",
         "body": "${1:value} for ${2:${1:value}} in ${0:iterable} if ${4:condition}",
-        "descriptino": "comprehention with if filter"
+        "description": "comprehention with if filter"
     },
     "list comprehension": {
         "prefix": "lc",

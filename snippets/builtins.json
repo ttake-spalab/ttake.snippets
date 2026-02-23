@@ -1,4 +1,9 @@
 {
+    "from __future__ import": {
+        "prefix": "fimf",
+        "body": "from __future__ import ${1:annotations, division}",
+        "description": "future statement"
+    },
     "from collection.abc import ...": {
         "prefix": "fimabc",
         "body": "from collection.abc import $0",
@@ -8,6 +13,15 @@
         "prefix": "fimdata",
         "body": "from dataclasses import dataclass",
         "description": "import dataclass"
+    },
+    "dataclass template": {
+        "pefix": "@dataclass",
+        "body": [
+            "@dataclass",
+            "class ${1:ClassName}:",
+            "\t${0:name: types}"
+        ],
+        "description": "dataclass"
     },
     "from datetime import datetime": {
         "prefix": "fimdate",

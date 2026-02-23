@@ -1,0 +1,56 @@
+{
+    "numpy": {
+        "prefix": "imnp",
+        "body": "import numpy as np"
+    },
+    "matplotlib": {
+        "prefix": "immpl",
+        "body": "import matplotlib as mpl"
+    },
+    "matplotlib.pyplot": {
+        "prefix": "implt",
+        "body": "import matplotlib.pyplot as plt"
+    },
+    "matplotlib.style": {
+        "prefix": "plt.style",
+        "body": "plt.style.use($0)"
+    },
+    "seaborn": {
+        "prefix": "imsns",
+        "body": "import seaborn as sns"
+    },
+    "Pandas": {
+        "prefix": "impd",
+        "body": "import pandas as pd"
+    },
+    "Tqdm": {
+        "prefix": "fimtqdm",
+        "body": "from tqdm import tqdm"
+    },
+    "tabulate": {
+        "prefix": "fimtabulate",
+        "body": "from tabulate import tabulate"
+    },
+    "TensorFlow": {
+        "prefix": "imtf",
+        "body": "import tensorflow as tf"
+    },
+    "with nograd": {
+        "prefix": "withnograd",
+        "body": [
+            "with torch.no_grad()",
+            "\t${0:pass}"
+        ],
+        "description": "with torch.no_grad()"
+    },
+    "module template": {
+        "prefix": "classmodule",
+        "body": [
+            "class ${1:ModuleName}(nn.Module):",
+            "",
+            "\tdef forward(self, ${2:args: torch.Tensor}) -> ${3:torch.Tensor}:",
+            "\t\t${0:pass}"
+        ],
+        "description": "pytorch Module"
+    }
+}

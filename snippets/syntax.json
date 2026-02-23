@@ -389,7 +389,7 @@
         "description": "`yield from` statement"
     },
     "raise": {
-        "prefix": "ra",
+        "prefix": "raise",
         "body": "raise ${0:Exception}",
         "description": "`raise` statement"
     },
@@ -417,11 +417,6 @@
         "prefix": "fimas",
         "body": "from ${1:package/module} import ${2:module} as ${0:alias}",
         "description": "`from import as` statement"
-    },
-    "from __future__ import": {
-        "prefix": "fimf",
-        "body": "from __future__ import ${1:annotations, division}",
-        "description": "future statement"
     },
     "global": {
         "prefix": "gl",

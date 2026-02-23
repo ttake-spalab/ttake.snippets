@@ -20,6 +20,10 @@
             {
                 "language": "python",
                 "path": "./snippets/syntax.json"
+            },
+            {
+                "language": "python",
+                "path": "./snippets/thirdparty.json"
             }
         ]
     }

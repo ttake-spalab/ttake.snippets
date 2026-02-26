@@ -15,7 +15,7 @@
         "description": "import dataclass"
     },
     "dataclass template": {
-        "pefix": "@dataclass",
+        "prefix": "@dataclass",
         "body": [
             "@dataclass",
             "class ${1:ClassName}:",

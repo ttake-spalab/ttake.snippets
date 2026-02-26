@@ -38,7 +38,7 @@
     "with nograd": {
         "prefix": "withnograd",
         "body": [
-            "with torch.no_grad()",
+            "with torch.no_grad():",
             "\t${0:pass}"
         ],
         "description": "with torch.no_grad()"

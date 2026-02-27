@@ -42,5 +42,15 @@
         "prefix": "fimpp",
         "body": "from pprint import pprint",
         "description": "import pprint"
+    },
+    "print f-string": {
+        "prefix": "printf",
+        "body": "print(f\"$1\")$0",
+        "description": "print(f\"...\")"
+    },
+    "print value": {
+        "prefix": "printv",
+        "body": "print(f\"{${1:value} = }\")$0",
+        "description": "print(f\"{value = }\")"
     }
 }

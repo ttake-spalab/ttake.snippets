@@ -3,6 +3,10 @@
         "prefix": "imnp",
         "body": "import numpy as np"
     },
+    "numpy.typing": {
+        "prefix": "imnpt",
+        "body": "import numpy.typing as npt"
+    },
     "matplotlib": {
         "prefix": "immpl",
         "body": "import matplotlib as mpl"

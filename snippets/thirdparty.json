@@ -51,8 +51,12 @@
         "prefix": "classmodule",
         "body": [
             "class ${1:ModuleName}(nn.Module):",
+            "\t\"\"\"${2:docstring for ${1:ModuleName}}\"\"\"",
             "",
-            "\tdef forward(self, ${2:args: torch.Tensor}) -> ${3:torch.Tensor}:",
+            "\tdef __init__(self, ${3:args: type}) -> None:",
+            "\t\tsuper(${1:ModuleName}, self).__init__()",
+            "",
+            "\tdef forward(self, inputs: Tensor) -> Tensor:",
             "\t\t${0:pass}"
         ],
         "description": "pytorch Module"

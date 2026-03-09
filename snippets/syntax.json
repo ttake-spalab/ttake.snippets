@@ -251,8 +251,8 @@
         "prefix": "classi",
         "body": [
             "class ${1:ClassName}:",
-            "\t\"\"\"${3:docstring for ${1:ClassName}}\"\"\"",
-            "\tdef __init__(self, ${args: types}) -> None:",
+            "\t\"\"\"${2:docstring for ${1:ClassName}}\"\"\"",
+            "\tdef __init__(self, ${3:args: types}) -> None:",
             "\t\tsuper(${1:ClassName}, self).__init__()",
             "\t\t$0"
         ],
